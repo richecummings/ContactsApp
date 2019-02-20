@@ -6,10 +6,13 @@ using Foundation;
 [assembly: Dependency(typeof(Contact))]
 namespace ContactsApp.iOS
 {
+    [Preserve(AllMembers = true)]
     public class Contact : IContact
     {
+        [Preserve(Conditional = false)]
         public Contact()
         {
+            // code that we want to preserve
         }
 
         public string ByeContact()
